@@ -1,14 +1,13 @@
 #include <iostream>
-#include <stdlib.h>
 
-extern int maximum(int*,int);
+extern int binary_to_number(int[],int);
+using namespace std;
 
-int main(int argc,char **argv)
-{
-    // your code goes here ...
-    int nums[5]={2,3,4,6,1};
-    int number=5;
-    std::cout<<"maximum is "<<maximum(nums,number);
-    return 0 ;
+int main (){
+    int array[]={1,1,0,0,0,1,1};
+    int size=sizeof(array)/4;
+    int decimal=0;
+    decimal = binary_to_number(array,size);
+    cout<<"your number is :"<<decimal<<endl;
+    return 0;
 }
-

@@ -1,13 +1,11 @@
 #include<iostream>
 
-int sumtwo(int array[], int secondarray[], int n){
-    int sum=0;
-    if (n<1){
-        sum=0;
-    }else{
-        for (int i=0;i<n;i++){
-            sum=sum+array[i]+secondarray[i];
+void print_scaled_matrix(int array[3][3],int scale){
+    for(int i=0;i<3;i++){
+        for (int j=0;j<3;j++){
+            array[i][j]=array[i][j]*scale;
+            std::cout<<array[i][j]<<" ";
         }
+        std::cout<<std::endl;
     }
-    return sum;
 }

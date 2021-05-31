@@ -1,13 +1,10 @@
-#include <iostream>
-#include <stdlib.h>
+#include<iostream>
 
-extern int sumtwo(int*,int*,int);
+extern void print_scaled_matrix(int[3][3],int);
 
 int main(){
-    int array1[5]={1,2,3,4,5};
-    int array2[5]={2,3,4,5,6};
-    int count=5;
-    std::cout<<"sum of two array"<<sumtwo(array1,array2,count)<<std::endl;
-    return 0;
-    
+    int scale = 3 ;
+    int threebythree[3][3] = {{0,1,2},{3,4,5},{6,7,8}} ;
+    print_scaled_matrix(threebythree,scale) ;
 }
+

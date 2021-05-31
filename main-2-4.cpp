@@ -1,13 +1,19 @@
-#include <iostream>
-#include <stdlib.h>
+#include<iostream>
 
-extern bool ascending(int*,int);
+extern int sum_min_and_max(int[], int);
+extern int max_integer(int[], int);
+extern int min_integer(int[], int);
 
-int main(int argc,char **argv)
-{
-    int array[10]={2,2,4,5,5,5,9,9,10,12};
-    int count=10;
-    std::cout<<"upper case : "<<ascending(array,count)<<std::endl;
+using namespace std;
 
-    return 0 ;
+int main(){
+    int sum;
+    int max;
+    int min;
+    int array[]={1,3,4,38,5,3,-1};
+    int length = sizeof(array)/4;
+    sum=sum_min_and_max(array,length);
+    max=max_integer(array,length);
+    min=min_integer(array,length);
+    cout<<sum<<endl<<max<<endl<<min<<endl;
 }

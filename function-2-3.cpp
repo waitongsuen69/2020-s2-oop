@@ -1,23 +1,55 @@
 #include<iostream>
 
-void twofivenine(int array[], int n){
-    int num2=0;
-    int num5=0;
-    int num9=0;
-    for (int i=0;i<n;i++){
-        switch (array[i]){
-            case 2:
-                num2=num2+1;
-                break;
-            case 5:
-                num5=num5+1;
-                break;
-            case 9:
-                num9=num9+1;
-                break;
+int sum_if_a_palindrome(int integers[], int length){
+    bool palindrome=true;
+    int sum=0;
+    
+    if(length<=0){
+        palindrome= false;
+    }else{
+    for(int j=0;j<length/2;j++){
+        if (integers[j]!=integers[length-j-1]){
+            palindrome=false;
+            break;
         }
-        
+      }
     }
-    std::cout<<"2:"<<num2<<";5:"<<num5<<";9:"<<num9<<";"<<std::endl;
+    if (palindrome == true ){
+        for (int i=0;i<length;i++){
+                sum=sum+integers[i];
+        }
+    }else
+        {
+            sum=-2;
+    }
+    return sum;
+}
 
+
+bool is_a_palindrome(int integers[], int length){
+    bool palindrome=true;
+    if(length<=0){
+        palindrome= false;
+    }else{
+    for(int j=0;j<length/2;j++){
+        if (integers[j]!=integers[length-j-1]){
+            palindrome=false;
+            break;
+            }
+        }
+    }
+    return palindrome;
+}
+
+
+int sum_elements(int integers[], int length){
+    int sum=0;
+    if(length<=0){
+        sum=-1;
+    }else{
+    for (int i=0;i<length;i++){
+            sum=sum+integers[i];
+        }
+    }
+    return sum;
 }

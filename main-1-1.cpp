@@ -1,13 +1,15 @@
 #include<iostream>
-#include<stdlib.h>
 
-extern int sum_array(int*, int);
+extern int diagonal(int[4][4]);
 
 int main(){
-    int sum_of_array=0;
-    int nums[5]={1,2,3,4,5};
-    sum_of_array=sum_array(nums,5);
-    std::cout<<"sum is "<<sum_of_array<<std::endl;
+    int square_array[4][4]={{1,2,3,4},{1,2,3,4},{1,2,3,4},{1,2,3,4}};
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            std::cout << square_array[i][j]<<" ";
+        }
+        std::cout<<std::endl;
+    }
+    std::cout<<"sum is "<<diagonal(square_array)<<std::endl;
     
-    return 0;
 }

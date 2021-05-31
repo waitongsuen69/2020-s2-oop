@@ -1,16 +1,17 @@
 #include<iostream>
 
-int maximum(int array[], int n){
-        int maximum= array[0];
-        if (n<1){
-            maximum=0;
-        }else{
-            for (int i=1;i<n;i++){
-                if(maximum<array[i]){
-                    maximum=array[i];
-                    }
-                
-                }
+using namespace std;
+
+int binary_to_number(int binary_digits[], int number_of_digits){
+    int decimal_numbers=0;
+    for(int i=0;i<number_of_digits;i++){
+        int result=0;
+        if ( binary_digits[i] != 0){
+            result=1;
+            for (int j=0;j<number_of_digits-i-1;j++){
+                result=result*2;
+            }
         }
-        return maximum;
+        decimal_numbers =decimal_numbers+result;    }
+    return decimal_numbers;
 }

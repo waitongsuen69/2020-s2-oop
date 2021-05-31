@@ -1,16 +1,16 @@
 #include<iostream>
 
-int count_even(int number){
-    int count_Even=0;
-    if (number<1){
-        count_Even=0;
-    }else{
-    for (int i=1;i<=number;i++){
-        if (i%2==0){
-            count_Even=count_Even+1;
+using namespace std;
+
+void print_summed_matrices(int array1[3][3],int array2[3][3]){
+    int sum_array[3][3];
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            sum_array[i][j]=array1[i][j]+array2[i][j];
+            cout<<sum_array[i][j]<<" ";
         }
+        cout<<endl;
     }
-    }
-    
-    return count_Even;
+        
+        
 }

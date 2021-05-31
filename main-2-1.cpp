@@ -1,13 +1,9 @@
-#include <iostream>
-#include <stdlib.h>
+#include<iostream>
 
-extern int minimum(int*,int);
+extern void print_as_binary(std::string);
 
-int main(int argc,char **argv)
-{
-    // your code goes here ...
-    int nums[5]={2,3,4,5,1};
-    int number=5;
-    std::cout<<"minimum is "<<minimum(nums,number);
-    return 0 ;
+int main(){
+    std::string str="12345";
+    print_as_binary(str);
+    return 0;
 }

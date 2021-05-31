@@ -1,14 +1,50 @@
 #include<iostream>
 
-bool ascending(int array[], int n){
-    bool ascend=true;
-    int index=0;
-    while(ascend==true && index != n-1){
-        if (array[index]>array[index+1]){
-            ascend=false;
+int sum_min_and_max(int integers[], int length){
+    int sum=0;
+    int min=integers[0];
+    int max=integers[0];
+    if(length<=0){
+        sum=-1;
+    }else{
+        for (int i=1;i<length;i++){
+            if(integers[i]>max){
+                max=integers[i];
+            }else{
+                min=integers[i];
+            }
         }
-        index+=1;
+        sum=max+min;
     }
-    return ascend;
+    return sum;
 }
 
+
+int max_integer(int integers[], int length){
+    int max=integers[0];
+    if(length<=0){
+        max=-1;
+    }else{
+        for (int i=1;i<length;i++){
+            if(integers[i]>max){
+                max=integers[i];
+            }
+        }
+    }
+    return max;
+}
+
+
+int min_integer(int integers[], int length){
+    int min=integers[0];
+    if(length<=0){
+        min=-1;
+    }else{
+        for (int i=1;i<length;i++){
+            if(integers[i]<min){
+                min=integers[i];
+            }
+        }
+    }
+    return min;
+}

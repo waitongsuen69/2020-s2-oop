@@ -1,16 +1,16 @@
 #include<iostream>
 
-double average(int array[], int n)
-{
-    double sum=0;
-    double average=0;
-    if(n<1){
-        average=0;
-    }else {
-        for (int i=0;i<n;i++){
-            sum=sum+array[i];
+int identity(int array[10][10]){
+    int output=1;
+    for (int i=0;i<10;i++){
+        for (int j=0;j<10;j++){
+            if (i==j && array[i][j]!=1){
+                output=0;
+            }
+            if(i!=j && array[i][j] != 0){
+                output=0;
+            }
         }
-        average=sum/n;
     }
-    return average;
+    return output;
 }
